@@ -1,2 +1,0 @@
-python-box==4.0.4
-PyYAML==5.3

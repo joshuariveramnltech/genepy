@@ -1,8 +1,0 @@
-README.md
-setup.py
-bin/genepy
-src/genepy.egg-info/PKG-INFO
-src/genepy.egg-info/SOURCES.txt
-src/genepy.egg-info/dependency_links.txt
-src/genepy.egg-info/requires.txt
-src/genepy.egg-info/top_level.txt

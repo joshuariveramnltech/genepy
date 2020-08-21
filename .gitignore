@@ -1,18 +1,26 @@
-# virtualenv dir
-venv
+# Compiled python modules.
+*.pyc
 
-# python cache
-__pycache__
+# intellij folders and files
+.idea
+*.iml
 
-# Visual Studio Code
+# Setuptools distribution folder.
+/dist/
+/build/
+
+# Python egg metadata, regenerated from source files by setuptools.
+*.egg-info
+
+*.xml
+*.log
+
+*.robot
+# VSCode Folder
 .vscode
 
-api/resource/config.yaml
+# Virtual Env folder
+venv
 
-kitica-venv
-
-*.db
-
-.DS_Store
-*.bak
-*.sock
+# Robot results folder
+results
