@@ -1,41 +1,33 @@
-import re
-from setuptools import setup, find_packages
-from os.path import abspath, dirname, join
+# Copyright (C) 2020 Joshua Kim Rivera
 
-CURDIR = dirname(abspath(__file__))
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 
-CLASSIFIERS = '''
-Development Status :: 4 - Beta
-License :: OSI Approved :: MIT License
-Operating System :: OS Independent
-Programming Language :: Python :: 3
-'''.strip().splitlines()
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-with open(join(CURDIR, 'requirements.txt')) as f:
-    REQUIREMENTS = f.read().splitlines()
-
-setup(
-    name                                = 'genepy',
-    version                             = '0.0.1',
-    description                         = 'Python tool for generating gitlab-ci documentation.',
-    long_description                    = long_description,
-    long_description_content_type       = "text/markdown",
-    url                                 = 'https://github.com/MainSystemDev/kitica',
-    author                              = 'Joshua Kim Rivera',
-    author_email                        = 'joshuakimrivera@gmail.com',
-    license                             = license,
-    platforms                           = 'any',
-    classifiers                         = CLASSIFIERS,
-    install_requires                    = REQUIREMENTS,
-    package_dir                         = {'': 'src'},
-    packages                            = find_packages('src'),
-    scripts                             =['bin/genepy']
-)
-
+from setuptools import setup
 
 setup(
-
+    name                        ='genepy',
+    version                     ='0.1',
+    description                 ='Python Tool for generating gitlab-ci jobs',
+    author                      ='Joshua Kim Rivera',
+    author_email                ='joshuakimrivera@gmail.com',
+    license                     ='MIT',
+    packages                    =['genepy'],
+    scripts                     =['bin/genepy'],
+    zip_safe                    =False
 )

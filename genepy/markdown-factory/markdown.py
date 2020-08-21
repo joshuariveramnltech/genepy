@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # Copyright (C) 2020 Joshua Kim Rivera
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,15 +18,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import genepy
-from argparse import ArgumentParser
 
-# Instantiate ArgumentParser Class
-parser = ArgumentParser()
 
-# Add Argumet Params here...
-parser.add_argument("-s", "--environment", help="set the test environment", default="UAT")
-args = parser.parse_args()
+class MarkdownWriter(object):
 
-# print(args)
-genepy.scan()
+    def __init__(self):
+        # Do Nothing
+        pass
+
+    

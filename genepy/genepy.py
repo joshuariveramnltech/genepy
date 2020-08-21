@@ -17,7 +17,7 @@ class Genepy(object):
             for filename in files:
                 if fnmatch.fnmatch(filename, PATTERN):
                     print(os.path.join(root, filename))
-                    self._load_files(os.path.join(root, filename))
+                    # self._load_files(os.path.join(root, filename))
     
     def _load_files(self, filename):
         with open(filename) as f:
@@ -26,8 +26,8 @@ class Genepy(object):
             print(config)
 
 
-if __name__ == '__main__':
-    documentation = DocumentGenerator()
+def scan():
+    documentation = Genepy()
     print('Scanning Files....')
     documentation._scan_files()
     print('Scan Finished')
