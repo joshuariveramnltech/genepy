@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: genepy
+Version: 0.0.1
+Summary: Python tool for generating gitlab-ci documentation.
+Home-page: https://github.com/MainSystemDev/kitica
+Author: Joshua Kim Rivera
+Author-email: joshuakimrivera@gmail.com
+License: Type license() to see the full license text
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
