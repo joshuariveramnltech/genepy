@@ -20,6 +20,9 @@
 
 import os, fnmatch, yaml, argparse
 from box import Box
+from .htmlfactory import HtmlFactory
+from .markdownfactory import MarkdownFactory
+
 
 PATTERN = "*.gitlab-ci.yml"
 
@@ -41,19 +44,27 @@ class Genepy(object):
     
     def _load_files(self, filename):
         with open(filename) as f:
-            config = yaml.load(f, Loader=yaml.FullLoader)
-            config = Box(config)
-            print(config)
+            jobs = yaml.load(f, Loader=yaml.FullLoader)
+            # print(jobs)
+            for job in jobs:
+                for config in jobs[job]:
+                    if config == 'only':
+                        for variables in jobs[job][config]:
+                            print(variables)
+                            # for variable in jobs[job][config][variables]:
+                            #     print(variable)
+                        
 
-
-def main(target=CURDIR):
+def main():
     
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--directory", help="sets the target directory", default=CURDIR)
+    parser.add_argument("-s", "--scan_only", help="only perform scan for matching files on the target directory", default=False)
 
     args = parser.parse_args()
+    print(args)
 
     documentation = Genepy()
-    print('Scanning Files....')
-    documentation._scan_files(args.directory)
-    print('Scan Finished')
+
+    if args.scan_only.lower() == 'true':
+        documentation._scan_files(args.directory)
