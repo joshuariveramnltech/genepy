@@ -18,12 +18,4 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
-
-class MarkdownWriter(object):
-
-    def __init__(self):
-        # Do Nothing
-        pass
-
-    
+from .markdownfactory import MarkdownFactory

@@ -18,18 +18,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from setuptools import setup
 
-setup(
-    name                        ='genepy',
-    version                     ='0.1',
-    description                 ='Python Tool for generating gitlab-ci jobs documentation',
-    author                      ='Joshua Kim Rivera',
-    author_email                ='joshuakimrivera@gmail.com',
-    license                     ='MIT',
-    packages                    =['genepy'],
-    entry_points = {
-        'console_scripts': ['genepy=genepy.genepy:main'],
-    },
-    zip_safe                    =False
-)
+
+class MarkdownFactory(object):
+
+    def __init__(self):
+        # Do Nothing
+        pass
+
+    
