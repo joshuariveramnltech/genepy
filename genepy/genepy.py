@@ -47,12 +47,14 @@ class Genepy(object):
             jobs = yaml.load(f, Loader=yaml.FullLoader)
             # print(jobs)
             for job in jobs:
-                for config in jobs[job]:
-                    if config == 'only':
-                        for variables in jobs[job][config]:
-                            print(variables)
-                            # for variable in jobs[job][config][variables]:
-                            #     print(variable)
+                if not 'template' in job:
+                    print(job)
+                    for config in jobs[job]:
+                        if config == 'only':
+                            for variables in jobs[job][config]:
+                                print(variables)
+                                for variable in jobs[job][config][variables]:
+                                    print(variable)
                         
 
 def main():
